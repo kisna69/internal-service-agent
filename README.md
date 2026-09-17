@@ -73,7 +73,8 @@ pip install -r requirements.txt
 
 ---
 
-## 8. How to Run
+## 8. How to Run Locally
+
 Run the Streamlit application with:
 
 ```bash
@@ -84,7 +85,41 @@ streamlit run app.py
 python -m streamlit run app.py
 ```
 
-The web application will automatically open in your default browser at `http://localhost:8501`.
+The web application will open in your default browser at `http://localhost:8501`.
+
+---
+
+## 9. How to Deploy on Vercel
+
+The project includes an [`index.html`](file:///c:/sales%20agent/index.html) and [`vercel.json`](file:///c:/sales%20agent/vercel.json) powered by **stlite** (WebAssembly-based client-side Streamlit). This allows the entire Streamlit application to run directly on Vercel without requiring a paid server.
+
+### Option A: Via GitHub (Recommended)
+1. Push this directory to your GitHub account:
+   ```bash
+   git remote add origin https://github.com/<your-username>/<your-repo-name>.git
+   git branch -M main
+   git push -u origin main
+   ```
+2. Go to [vercel.com](https://vercel.com) and log in.
+3. Click **"Add New..."** -> **"Project"**.
+4. Import your GitHub repository.
+5. Keep Framework Preset as **"Other"** and leave Build Command / Output Directory default.
+6. Click **"Deploy"**. Vercel will give you a public URL (e.g., `https://veridian-corp-it.vercel.app`) that anyone can open.
+
+### Option B: Via Vercel CLI
+Run the following in your terminal:
+```bash
+npx vercel
+```
+Follow the interactive prompts to link your project and deploy.
+
+---
+
+## 10. How to Deploy on Streamlit Community Cloud (Alternative Free Hosting)
+1. Push this project to GitHub.
+2. Visit [share.streamlit.io](https://share.streamlit.io/).
+3. Select your repository, set the branch to `main`, and the main file path to `app.py`.
+4. Click **Deploy**.
 
 ---
 
